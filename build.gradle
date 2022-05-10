@@ -9,6 +9,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id 'checkstyle'
 }
 
 repositories {
@@ -26,5 +27,23 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'terminalRPG.App'
+    mainClass = 'terminalRpg.App'
 }
+
+ apply plugin: 'checkstyle'
+ checkstyle {
+   // Keep checkstyle a little quieter
+   ignoreFailures = true
+   showViolations = false
+ }
+
+ tasks.withType(Checkstyle) {
+   reports {
+     html.enabled = true
+     xml.enabled = false
+     configFile = 'config/checkstyle/checkstyle.xml' as File
+   }
+ }
+ checkstyle {
+     toolVersion = "8.45"
+ }
