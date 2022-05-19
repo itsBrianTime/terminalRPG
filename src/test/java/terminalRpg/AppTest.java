@@ -8,6 +8,8 @@ import org.junit.Test;
 
 import terminalrpg.App;
 
+import org.json.*;
+
 import static org.junit.Assert.*;
 
 public class AppTest {

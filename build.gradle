@@ -8,10 +8,11 @@
 
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
+    id 'java'
     id 'application'
-    id 'checkstyle'
     id "com.github.spotbugs" version "4.5.1"
-    id 'jacoco'
+    id "checkstyle"
+    id 'jacoco' 
     
 }
 
@@ -24,9 +25,13 @@ repositories {
 dependencies {
     // Use JUnit test framework.
     testImplementation 'junit:junit:4.13.2'
-
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:30.1.1-jre'
+    // Adding JSON dependency
+    implementation 'org.json:json:20210307'
+
+    //compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+
 }
 
 application {
