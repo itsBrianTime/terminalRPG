@@ -6,6 +6,9 @@
  * User Manual available at https://docs.gradle.org/7.4.2/userguide/building_java_projects.html
  */
 
+ // If you're running git bash use: export TERM=cygwin
+ // This will make the gradle tasks have normal characters when running
+
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'java'
