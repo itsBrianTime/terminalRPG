@@ -32,8 +32,7 @@ public class MagicSprite {
         spritePath = paramSpritePath;
         createSprite();
     }
-
-    
+ 
     /** 
      * Sets the relative path of the sprite image.
      * @param paramSpritePath String parameter of the path to desired image
@@ -41,7 +40,6 @@ public class MagicSprite {
     public void setPath(String paramSpritePath) {
         spritePath = paramSpritePath;
     }
-
     
     /** 
      * Gets relative path of the sprite image. 

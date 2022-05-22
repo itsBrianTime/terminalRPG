@@ -7,7 +7,7 @@ public class MagicConsole {
     }
 
     /** 
-     * Moves cursor up and delete the line.
+     * Moves cursor up and delete the line. Will run to the value of lines
      * @param lines lines to move
      */
     public boolean resetLines(int lines) {
